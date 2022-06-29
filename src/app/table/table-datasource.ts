@@ -1,5 +1,3 @@
-import { Injectable, OnInit } from '@angular/core';
-import { ApiService } from './../api.service';
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -55,7 +53,6 @@ export class TableDataSource extends DataSource<Rates> {
   }
 }
 
-/** Simple sort comparator for example ID/Name columns (for client-side sorting). */
 function compare(a: string | number, b: string | number, isAsc: boolean): number {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
